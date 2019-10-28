@@ -25,6 +25,7 @@ const routing = {
     '/pic2.png': sendData.bind(null, 'pic2.png', 'image/png'),
     '/pic3.png': sendData.bind(null, 'pic3.png', 'image/png'),
     '/pic4.png': sendData.bind(null, 'pic4.png', 'image/png'),
+    '/favicon.ico': sendData.bind(null, 'favicon.ico', 'image/ico'),
 };
 
 const server = http.createServer((req, res) => {
@@ -33,7 +34,7 @@ const server = http.createServer((req, res) => {
         res.setHeader('Content-Type', 'text/plain');
         return res.end('Method not implemented');
     }
-	console.log(req.url);
+    console.log(req.url);
     const dataSender = routing[req.url];
     dataSender(res);
 });
