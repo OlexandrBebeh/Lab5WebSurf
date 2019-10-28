@@ -1,0 +1,28 @@
+<HEAD>
+<meta charset="utf-8">
+<SCRIPT>
+function mult(){
+img_array = new Array()
+for (var i=0; i<4; i++)
+img_array[i] = new Image(50,100)
+img_array[0].src = "pic1.png"
+img_array[1].src = "pic2.png"
+img_array[2].src = "pic3.png"
+img_array[3].src = "pic4.png"
+var t=new Date()
+p=-1
+}
+function s(){
+p=p+1
+document.images[0].src =img_array[p].src
+setTimeout("s()",100)
+if (p==3) p=-1
+}
+</SCRIPT>
+</HEAD>
+<BODY onLoad="mult()">
+<img src="pic1.png" width="200">
+<br>
+<input type="button" name="But" value="Подивитись" onClick="s()">
+</BODY>
+</HTML>
