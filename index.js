@@ -33,6 +33,7 @@ const server = http.createServer((req, res) => {
         res.setHeader('Content-Type', 'text/plain');
         return res.end('Method not implemented');
     }
+	console.log(req.url);
     const dataSender = routing[req.url];
     dataSender(res);
 });
