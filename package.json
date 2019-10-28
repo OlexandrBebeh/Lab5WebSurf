@@ -1,0 +1,32 @@
+{
+  "name": "lab5websurf",
+  "version": "1.0.0",
+  "description": "web laba 5",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "npm run prettier",
+    "prepush": "npm run test",
+    "prettier": "prettier --config .prettierrc.json --write index.js",
+    "test": "eslint index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlexandrBebeh/Lab5WebSurf.git"
+  },
+  "keywords": [
+    "ls",
+    "node"
+  ],
+  "author": "Sasha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlexandrBebeh/Lab5WebSurf/issues"
+  },
+  "homepage": "https://github.com/OlexandrBebeh/Lab5WebSurf#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "husky": "^3.0.9",
+    "prettier": "^1.18.2"
+  }
+}
